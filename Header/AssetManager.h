@@ -1,8 +1,6 @@
 #ifndef ASSETMANAGER_H
 #define ASSETMANAGER_H
 
-#pragma once
-
 #include <map>
 #include <SFML/Graphics.hpp>
 #include <iostream>

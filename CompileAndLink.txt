@@ -1,3 +1,7 @@
-g++ -I C:\SFML-2.6.0\include -I C:\Users\matlo\Desktop\Code23\Space-Shooter\Header -c AssetManager.cpp StateMachine.cpp Game.cpp InputManager.cpp SplashState.cpp MainMenuState.cpp GameState.cpp main.cpp 
+g++ -I C:\SFML-2.6.0\include -I C:\Users\matlo\Desktop\Code23\Game-Template\Header -c AssetManager.cpp StateMachine.cpp Game.cpp InputManager.cpp SplashState.cpp MainMenuState.cpp GameState.cpp main.cpp 
+
+g++ AssetManager.o StateMachine.o Game.o InputManager.o SplashState.o MainMenuState.o GameState.o  main.o -o p -L"C:\SFML-2.6.0\lib" -lsfml-graphics -lsfml-window -lsfml-system
+/////////////////////////////////////////////////////////
+g++ -I C:\SFML-2.6.0\include -I C:\Users\matlo\Desktop\Code23\Game-Template\Header -c AssetManager.cpp StateMachine.cpp InputManager.cpp 
 
 g++ AssetManager.o StateMachine.o Game.o InputManager.o SplashState.o MainMenuState.o GameState.o  main.o -o p -L"C:\SFML-2.6.0\lib" -lsfml-graphics -lsfml-window -lsfml-system
