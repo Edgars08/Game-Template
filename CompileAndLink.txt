@@ -2,6 +2,6 @@ g++ -I C:\SFML-2.6.0\include -I C:\Users\matlo\Desktop\Code23\Game-Template\Head
 
 g++ AssetManager.o StateMachine.o Game.o InputManager.o SplashState.o MainMenuState.o GameState.o  main.o -o p -L"C:\SFML-2.6.0\lib" -lsfml-graphics -lsfml-window -lsfml-system
 /////////////////////////////////////////////////////////
-g++ -I C:\SFML-2.6.0\include -I C:\Users\matlo\Desktop\Code23\Game-Template\Header -c AssetManager.cpp StateMachine.cpp InputManager.cpp 
+g++ -I C:\SFML-2.6.0\include -I C:\Users\matlo\Desktop\Code23\Game-Template\Header -c AssetManager.cpp StateMachine.cpp InputManager.cpp Game.cpp SplashState.cpp
 
 g++ AssetManager.o StateMachine.o Game.o InputManager.o SplashState.o MainMenuState.o GameState.o  main.o -o p -L"C:\SFML-2.6.0\lib" -lsfml-graphics -lsfml-window -lsfml-system
