@@ -1,5 +1,5 @@
 #include "MainMenuState.h"
-// #include "GameState.h"
+#include "GameState.h"
 #include <sstream>
 #include <iostream>
 #include "Definations.h"
@@ -51,6 +51,10 @@ namespace Edgars
             if (sf::Event::Closed == event.type || _data->input.IsClicked(this->quit_text, sf::Mouse::Left, _data->window))
             {
                 _data->window.close();
+            }
+            if (_data->input.IsClicked(this->play_text, sf::Mouse::Left, _data->window))
+            {
+                _data->machine.AddState(StateRef(new GameState(_data)), true);
             }
             if (_data->input.IsHovering(this->quit_text, _data->window))
             {

@@ -7,3 +7,4 @@
 #define SPLASHSTATE_BACKGROUND "Res/defender-generic-1.jpg"
 #define MAINMENU_BACKGROUND "Res/main.png"
 #define MAINMENU_FONT "Res/PublicPixel-z84yD.ttf"
+#define GAMESTATE_BACKGROUND "Res/Free_Shmup_Sprites_Starfield.png"
