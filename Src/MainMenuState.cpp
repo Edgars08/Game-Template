@@ -48,13 +48,29 @@ namespace Edgars
         sf::Event event;
         while (_data->window.pollEvent(event))
         {
-            if (sf::Event::Closed == event.type)
+            if (sf::Event::Closed == event.type || _data->input.IsClicked(this->quit_text, sf::Mouse::Left, _data->window))
             {
                 _data->window.close();
             }
-            
+            if (_data->input.IsHovering(this->quit_text, _data->window))
+            {
+                this->quit_text.setFillColor(sf::Color::Green);
+            }
+            else
+            {
+                this->quit_text.setFillColor(sf::Color::White);
+            }
+            if (_data->input.IsHovering(this->play_text, _data->window))
+            {
+                this->play_text.setFillColor(sf::Color::Green);
+            }
+            else
+            {
+                this->play_text.setFillColor(sf::Color::White);
+            }
         }
     }
+
     void MainMenuState::Update(float dt)
     {
     }

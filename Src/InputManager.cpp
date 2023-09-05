@@ -18,16 +18,25 @@ namespace Edgars
             return false;
         }
     }
-    bool InputManager::IsSpriteClicked(sf::Sprite object, sf::Mouse::Button button, sf::RenderWindow &window)
+ 
+    bool InputManager::IsClicked(sf::Text text, sf::Mouse::Button button, sf::RenderWindow &window)
     {
         if (sf::Mouse::isButtonPressed(button))
         {
-            sf::IntRect tempRect(object.getPosition().x, object.getPosition().y, object.getGlobalBounds().width, object.getGlobalBounds().height);
-            if (tempRect.contains(sf::Mouse::getPosition(window))) // checks for collision between mouse and sprite/if sprite is clicked
-            // contain=Check if a point is inside the rectangle's area
+            sf::IntRect tempRect(text.getPosition().x,text.getPosition().y, text.getGlobalBounds().width, text.getGlobalBounds().height);
+            if (tempRect.contains(sf::Mouse::getPosition(window))) 
             {
                 return true;
             }
+        }
+        return false;
+    }
+    bool InputManager::IsHovering(sf::Text text, sf::RenderWindow &window)
+    {
+        sf::IntRect tempRect(text.getPosition().x, text.getPosition().y, text.getGlobalBounds().width, text.getGlobalBounds().height);
+        if (tempRect.contains(sf::Mouse::getPosition(window)))
+        {
+            return true;
         }
         return false;
     }
